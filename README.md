@@ -24,7 +24,7 @@
 
 ## Datasets
 
-In this project we are using the `2007 and 2012 VOC trainval` dataset in order to train the model. Testing the model is implemented using `2007 VOC test` dataset. 
+In this project we are using the `2007 and 2012 VOC trainval` dataset in order to train the model. Testing the model is implemented using `2007 VOC test` dataset. Instruction for downloading these datasets are shown below:
 
 ### VOC Dataset
 PASCAL VOC: Visual Object Classes
