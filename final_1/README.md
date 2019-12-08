@@ -36,6 +36,7 @@ In this project we are using the `2007 and 2012 VOC trainval` dataset in order t
 [2012 Dataset](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar) 
 
 ### Demo
+(((NEEDS CHANGES)))
 Run **SSD_Demo.ipynb** notebook to run Single-Shot Detection on a random image from the PascalVOC2012 dataset.
 ### Training
 Run **SSD_train.ipynb** notebook to train the SSD model on the PascalVOC2012 dataset.
