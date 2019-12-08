@@ -156,7 +156,7 @@ On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub
 - opts.py - Contains default variables, parameters, and paths to run experiments.
 - denNet.pt - Trained DUDnCNN net for image denoising.
 
-### References <br>
+### References 
 - [Project Statement for Object-Detection](https://www.charles-deledalle.fr/pages/files/ucsd_ece285_mlip/projectC_object_detection.pdf)
 - Inspired by https://github.com/amdegroot/ssd.pytorch for SSD Implementation.
 
