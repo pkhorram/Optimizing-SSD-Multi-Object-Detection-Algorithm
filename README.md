@@ -58,17 +58,7 @@ On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub
   - **SSD_train_RMSProp.ipynb** - Runs the training using RMSProp Optimizer.
   - **SSD_train_LearningRate.ipynb** - Runs the training using a range of *learning rates*. Used for hyperparameter tuning.
   - **SSD_train_Momentum.ipynb** - Runs the training using a range of *momentum* values. Used for hyperparameter tuning.
-- **Denoising Experiments** (Uses DUDnCNN trained net for denoising - denNet.pt)
-  - **SSD_Denoising.ipynb** - Runs detection on Clean, Noisy, and Denoised versions of a random image from the PascalVOC2012 dataset.
-  - **SSD_Denoise_Eval.ipynb** - Runs the evaluation of the the denoised images of the validation set of PascalVOC2012.
-  - **SSD_Denoise_Eval_Testset.ipynb** - Runs the evaluation of the denoised images of the test set of PascalVOC2007.
-  - **SSD_Noisy_Eval.ipynb** - Runs the evaluation of the the noisy images of the validation set of PascalVOC2012.
-  - **SSD_Noisy_Eval_Testset.ipynb** - Runs the evaluation of the noisy images of the test set of PascalVOC2007.
-  - **SSD_Denoise_Experiments.ipynb** - A superset of "SSD_Denoising.ipynb" that runs detection of Clean, Noisy, and Denoised versions of a random image from PascalVOC2012 dataset, while providing options for changing the characteristics of the noise added. The characteristics include Mean, Standard Deviation, and Magnitude.
-- **Video Experiments** (inside `video_experiments`)
-  - **SSD_VIDEO.ipynb** - Uses the pretrained SSD model on locally saved frames of a video stream. Detects Clean images.
-  - **SSD_VIDEO_NOISY.ipynb** - Uses the pretrained SSD model on locally saved frames of a video stream. Detects Noisy images.
-  - **SSD_VIDEO_DENOISED.ipynb** - Uses the pretrained SSD model on locally saved frames of a video stream. Detects Denoised images.
+
 ### Directory structure
 - pycache/ - .pyc files for Python interpreter to compile the source to
 - data/ - 
