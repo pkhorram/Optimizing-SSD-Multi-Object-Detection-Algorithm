@@ -44,7 +44,7 @@ Run **SSD_train.ipynb** notebook to train the SSD model on the PascalVOC2012 dat
 Run **SSD_Eval.ipynb** notebook to evaluate the SSD model on the PascalVOC2012 validation set.
 
 Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalVOC2007 test set. (Download the PascalVOC2007 test set using `wget http://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar` and run `tar -xvf VOCtest_06-Nov-2007.tar` in the root directory of the repository.
-### Performance <br>
+### Performance 
 
 
 | Category  | Clean Image (mAP) | Noisy Image (mAP) | Denoised Image (mAP) |
@@ -165,7 +165,7 @@ Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalV
 Regarding the Inception Implementation, we referred to:
 - [INCEPTION SINGLE SHOT MULTIBOX DETECTOR FOR OBJECT DETECTION ](https://sci-hub.tw/10.1109/icmew.2017.8026312)
 
-## A project by - 
+## Contributers - 
 
 - Vedavyas Poturu
 - Sanika Patange
