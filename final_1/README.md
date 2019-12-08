@@ -61,9 +61,7 @@ Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalV
   - **SSD_train_Momentum.ipynb** - Runs the training using a range of *momentum* values. Used for hyperparameter tuning.
 
 ### Directory structure
-- pycache/ - .pyc files for Python interpreter to compile the source to
-- data/ - 
-  - pycache/ - .pyc files for Python interpreter to compile the source to
+- data/ -
   - init.py - contains instances:
     - function detection_collate - stack images in 0th dimension and list of tensors with annotations for image and return in tuple format, given tuple of tensor images and list of annotations
     - function base_transform - resize and mean-normalize image
@@ -78,20 +76,10 @@ Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalV
   - \*.ipynb - jupyter notebooks to visualize descent of loss, other evaluation metrics
   - \*.jpeg - plots of loss functions in different scenarios
   - pickles/ - pickle files for easy storing of data during cross validation (different learning rates, momentums etc.)
-  - pycache/ - .pyc files for Python interpreter to compile the source to
   - NOISE_PARAMS.pkl - Pickle file for noise parameters
   - nntools.py - class script for base classes to implement neural nets, evaluate performance, specify metrics etc.
-- devkit_path / -
-  - annotations_cache/ - 
-    - annots.pkl - Pickle file for annotations
-  - results/ - result files for each class
-- eval/ -
-  - test1.txt - ground truth bbox vales and predictions for a selected portion of VOC dataset
-  - test1_Denoise.txt - ground truth bbox vales and predictions for a selected portion of the VOC dataset AFTER noising and denoising
-- layers/ -
-  - pycache/ - .pyc files for Python interpreter to compile the source to
-  - functions/ -
-    - pycache/ - .pyc files for Python interpreter to compile the source to
+- layers/ 
+  - functions/ - 
     - init.py - import all files in pwd
     - detection.py - contains instances:
       - class Detect - enable decoding of location predictions of bboxes and apply NMS based on confidence values and threshold; restrict to tok_k output predictions to reduce noise in results quality (not actual image noise)
@@ -102,7 +90,6 @@ Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalV
         - function init - allocate memory and initialize
         - forward - forward propagation through priorbox layers
   - modules/ -
-    - pycache/ - .pyc files for Python interpreter to compile the source to
     - init.py - import all files in pwd
     - l2norm.py - contains instances:
       - class L2Norm - calculate L2 norm and normalize
@@ -126,7 +113,7 @@ Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalV
 - out/ - output pickle files organized by the 20 VOC classes
 - train_eval_test_notebooks/ - training and evaluation notebooks for loss fn visualization
 - utils/ -
-  - pycache/ - .pyc files for Python interpreter to compile the source to
+
   - init.py - import all in pwd
   - augmentations.py - contains instances:
     - function intersect - return intersection of two given bounding boxes
