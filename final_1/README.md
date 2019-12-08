@@ -53,7 +53,7 @@ Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalV
 | Evaluation  | 77.43% | 46.47% | 61.84% |
 
 ### Experiments
-- **Training & Optimization Experiments** (Plots for all these experiments can be found inside `optimization_experiments/` folder)
+- **Training & Optimization Experiments** (Plots for all these experiments can be found inside `optimization_experiments/` folder). The experiemt was run over multiple optimizers as shown below. 
   - **SSD_train.ipynb** - Runs the training using SGD Optimizer.
   - **SSD_train_Adam.ipynb** - Runs the training using Adam Optimizer.
   - **SSD_train_RMSProp.ipynb** - Runs the training using RMSProp Optimizer.
