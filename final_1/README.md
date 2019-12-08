@@ -110,8 +110,6 @@ Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalV
     - function decode - decode locations from priors and locations and return bbox predictions
     - function log_sum_exp - compute log of sum of exponent of difference between current tensor and maximum value of tensor, for unaveraged confidence loss
     - function nms - compute non-maximum suppression to avoid too many overlapping bboxes that highlight nearly the same area
-- out/ - output pickle files organized by the 20 VOC classes
-- train_eval_test_notebooks/ - training and evaluation notebooks for loss fn visualization
 - utils/ -
 
   - init.py - import all in pwd
