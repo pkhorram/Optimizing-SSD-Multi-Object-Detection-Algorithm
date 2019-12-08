@@ -1,19 +1,15 @@
 # Optimizing SSD Multi-Object Detection Model (PyTorch)
 
-
-### Table of Contents
-- <a href='#Installation'>Installation</a>
-- <a href='#Datasets'>Datasets</a>
-- <a href='#Training-ssd'>Train</a>
-- <a href='#Evaluation'>Evaluate</a>
-- <a href='#Performance'>Performance</a>
-- <a href='#Demos'>Demos</a>
-- <a href='#Todo'>Future Work</a>
-- <a href='#Directory structure'>Directory-structure</a>
-- <a href='#References'>Reference</a>
-
-
-
+## Table of contents
+* [Installation](#Installation)
+* [Datasets](#Datasets)
+* [Demo](#Demo)
+* [Training](#Training)
+* [Evaluation](#Evaluation)
+* [Performance](#Performance)
+* [Experiments](#Experiments)
+* [Directory structure](#Directory-structure)
+* [References](#References)
 
 &nbsp;
 &nbsp;
@@ -21,6 +17,10 @@
 &nbsp;
 
 ## Installation
+
+To install Python dependencies and modules, use <br>
+```pip install -r requirements.txt``` <br>
+
 - Choose your environment on the website and install [PyTorch](http://pytorch.org/) by running the appropriate command.
 - Clone this repository.
 - Install one of Python 3+.
@@ -35,17 +35,6 @@ In this project we are using the `2007 and 2012 VOC trainval` dataset in order t
 
 [2012 Dataset](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar) 
 
-
-# Single Shot Detector 
-A PyTorch implementation of the SSD Multibox Detector for image feature extraction, based on the 2016 [Arxiv](http://arxiv.org/abs/1512.02325) paper by Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed, Cheng-Yang, and Alexander C.
-
-### Installation
-To install Python dependencies and modules, use <br>
-```pip install -r requirements.txt``` <br>
-
-To get the pretrained weights ready for use, run `tar -zxvf ssd_pretrained.pth.tar.gz` and `tar -zxvf vgg16_reducedfc.pth.tar.gz` inside the `weights/` folder.
-### Datasets
-[2012 version](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) of Pascal VOC dataset - well known dataset for object detection/classification/segmentation. Contains 100k images for training and validation containing bounding boxes with 20 categories of objects.
 ### Demo
 Run **SSD_Demo.ipynb** notebook to run Single-Shot Detection on a random image from the PascalVOC2012 dataset.
 ### Training
@@ -176,15 +165,18 @@ On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub
 - requirements.txt - package and module requirements for running the project
 - opts.py - Contains default variables, parameters, and paths to run experiments.
 - denNet.pt - Trained DUDnCNN net for image denoising.
+
 ### References <br>
-Apart from links above for SSD Arxiv paper and VOC dataset documentation, we referred to:
-- [Project problem statement document](https://www.charles-deledalle.fr/pages/files/ucsd_ece285_mlip/projectC_object_detection.pdf)
-- Inspired by https://github.com/amdegroot/ssd.pytorch for SSD Implementation
+- [Project Statement for Object-Detection](https://www.charles-deledalle.fr/pages/files/ucsd_ece285_mlip/projectC_object_detection.pdf)
+- Inspired by https://github.com/amdegroot/ssd.pytorch for SSD Implementation.
+
+Regarding the Inception Implementation, we referred to:
+- [INCEPTION SINGLE SHOT MULTIBOX DETECTOR FOR OBJECT DETECTION ](https://sci-hub.tw/10.1109/icmew.2017.8026312)
+
 ## A project by - 
 
-![](./Real_Time_Graduate_Descent.png)
+- Vedavyas Poturu
+- Sanika Patange
+- Payam Khorramshahi
+- Shivani Athavale
 
-- Raghav Subramanian
-- Karthikeyan Sugumaran
-- Rohit Gupta
-- Imtiaz Ameerudeen
