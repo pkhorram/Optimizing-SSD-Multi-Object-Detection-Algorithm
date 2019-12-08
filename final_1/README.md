@@ -45,7 +45,7 @@ Run **SSD_Eval.ipynb** notebook to evaluate the SSD model on the PascalVOC2012 v
 
 Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalVOC2007 test set. (Download the PascalVOC2007 test set using `wget http://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar` and run `tar -xvf VOCtest_06-Nov-2007.tar` in the root directory of the repository.
 ### Performance <br>
-On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub/home):
+
 
 | Category  | Clean Image (mAP) | Noisy Image (mAP) | Denoised Image (mAP) |
 | ------------- | ------------- | ------------- | ------------- |
