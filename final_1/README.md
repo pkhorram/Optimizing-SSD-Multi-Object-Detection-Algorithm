@@ -37,11 +37,15 @@ In this project we are using the `2007 and 2012 VOC trainval` dataset in order t
 
 ### Demo
 (((NEEDS CHANGES)))
-Run **SSD_Demo.ipynb** notebook to run Single-Shot Detection on a random image from the PascalVOC2012 dataset.
+Run **SSD_Demo.ipynb** notebook to run Single-Shot Detection on a random image from the VOC2007 dataset. 
+
+Replace voc_root and dataset_root in config_vgg16_ssd.py with the location of your downloaded dataset.
+voc_root -> should contain VOC2007 and VOC2012 directories -> PATH/ 
+dataset_root -> PATH/VOC2007/ 
 ### Training
-Run **SSD_train.ipynb** notebook to train the SSD model on the PascalVOC2012 dataset.
+Run **SSD_train.ipynb** notebook to train the SSD model on the PascalVOC2012+07 dataset.
 ### Evaluation
-Run **SSD_Eval.ipynb** notebook to evaluate the SSD model on the PascalVOC2012 validation set.
+Run **SSD_Eval.ipynb** notebook to evaluate the SSD model on the VOC2007 test set.
 
 Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalVOC2007 test set. (Download the PascalVOC2007 test set using `wget http://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar` and run `tar -xvf VOCtest_06-Nov-2007.tar` in the root directory of the repository.
 ### Performance 
@@ -77,7 +81,9 @@ Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalV
   - \*.jpeg - plots of loss functions in different scenarios
   - pickles/ - pickle files for easy storing of data during cross validation (different learning rates, momentums etc.)
   - NOISE_PARAMS.pkl - Pickle file for noise parameters
-  - nntools.py - class script for base classes to implement neural nets, evaluate performance, specify metrics etc.
+  - nntools.py - class script for base classes to implement neural nets, evaluate performance, specify metrics etc.   
+- architectures/-
+    - Network changes to the baseline model
 - layers/ 
   - functions/ - 
     - init.py - import all files in pwd
