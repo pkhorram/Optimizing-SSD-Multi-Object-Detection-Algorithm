@@ -41,6 +41,7 @@ Run **SSD_Demo.ipynb** notebook to run Single-Shot Detection on a random image f
 
 Replace ` voc_root ` and ` dataset_root ` in config_vgg16_ssd.py with the location of your downloaded dataset.
 `voc_root` -> should contain VOC2007 and VOC2012 directories -> ` PATH_TO/ ` 
+and 
 `dataset_root ` -> `PATH_TO/VOC2007/` 
 ### Training
 Run **SSD_train.ipynb** notebook to train the SSD model on the PascalVOC2012+07 dataset.
