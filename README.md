@@ -36,15 +36,21 @@ In this project we are using the `2007 and 2012 VOC trainval` dataset in order t
 [2012 Dataset](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar) 
 
 ### Demo
-Run **SSD_Demo.ipynb** notebook to run Single-Shot Detection on a random image from the PascalVOC2012 dataset.
+(((NEEDS CHANGES)))
+Run **SSD_Demo.ipynb** notebook to run Single-Shot Detection on a random image from the VOC2007 dataset. 
+
+Update ` voc_root ` and ` dataset_root ` in config_vgg16_ssd.py with the location of your downloaded dataset.
+`voc_root` -> should contain VOC2007 and VOC2012 directories -> ` PATH_TO/ ` 
+and 
+`dataset_root ` -> `PATH_TO/VOC2007/` 
 ### Training
-Run **SSD_train.ipynb** notebook to train the SSD model on the PascalVOC2012 dataset.
+Run **SSD_train.ipynb** notebook to train the SSD model on the PascalVOC2012+07 dataset.
 ### Evaluation
-Run **SSD_Eval.ipynb** notebook to evaluate the SSD model on the PascalVOC2012 validation set.
+Run **SSD_Eval.ipynb** notebook to evaluate the SSD model on the VOC2007 test set.
 
 Run **SSD_Eval_Testset.ipynb** notebook to evaluate the SSD model on the PascalVOC2007 test set. (Download the PascalVOC2007 test set using `wget http://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar` and run `tar -xvf VOCtest_06-Nov-2007.tar` in the root directory of the repository.
-### Performance <br>
-On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub/home):
+### Performance 
+
 
 | Category  | Clean Image (mAP) | Noisy Image (mAP) | Denoised Image (mAP) |
 | ------------- | ------------- | ------------- | ------------- |
@@ -52,7 +58,7 @@ On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub
 | Evaluation  | 77.43% | 46.47% | 61.84% |
 
 ### Experiments
-- **Training & Optimization Experiments** (Plots for all these experiments can be found inside `optimization_experiments/` folder)
+- **Training & Optimization Experiments** (Plots for all these experiments can be found inside `optimization_experiments/` folder). The experiemt was run over multiple optimizers as shown below. 
   - **SSD_train.ipynb** - Runs the training using SGD Optimizer.
   - **SSD_train_Adam.ipynb** - Runs the training using Adam Optimizer.
   - **SSD_train_RMSProp.ipynb** - Runs the training using RMSProp Optimizer.
@@ -60,9 +66,7 @@ On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub
   - **SSD_train_Momentum.ipynb** - Runs the training using a range of *momentum* values. Used for hyperparameter tuning.
 
 ### Directory structure
-- pycache/ - .pyc files for Python interpreter to compile the source to
-- data/ - 
-  - pycache/ - .pyc files for Python interpreter to compile the source to
+- data/ -
   - init.py - contains instances:
     - function detection_collate - stack images in 0th dimension and list of tensors with annotations for image and return in tuple format, given tuple of tensor images and list of annotations
     - function base_transform - resize and mean-normalize image
@@ -77,20 +81,12 @@ On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub
   - \*.ipynb - jupyter notebooks to visualize descent of loss, other evaluation metrics
   - \*.jpeg - plots of loss functions in different scenarios
   - pickles/ - pickle files for easy storing of data during cross validation (different learning rates, momentums etc.)
-  - pycache/ - .pyc files for Python interpreter to compile the source to
   - NOISE_PARAMS.pkl - Pickle file for noise parameters
-  - nntools.py - class script for base classes to implement neural nets, evaluate performance, specify metrics etc.
-- devkit_path / -
-  - annotations_cache/ - 
-    - annots.pkl - Pickle file for annotations
-  - results/ - result files for each class
-- eval/ -
-  - test1.txt - ground truth bbox vales and predictions for a selected portion of VOC dataset
-  - test1_Denoise.txt - ground truth bbox vales and predictions for a selected portion of the VOC dataset AFTER noising and denoising
-- layers/ -
-  - pycache/ - .pyc files for Python interpreter to compile the source to
-  - functions/ -
-    - pycache/ - .pyc files for Python interpreter to compile the source to
+  - nntools.py - class script for base classes to implement neural nets, evaluate performance, specify metrics etc.   
+- architectures/-
+    - Network changes to the baseline model
+- layers/ 
+  - functions/ - 
     - init.py - import all files in pwd
     - detection.py - contains instances:
       - class Detect - enable decoding of location predictions of bboxes and apply NMS based on confidence values and threshold; restrict to tok_k output predictions to reduce noise in results quality (not actual image noise)
@@ -101,7 +97,6 @@ On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub
         - function init - allocate memory and initialize
         - forward - forward propagation through priorbox layers
   - modules/ -
-    - pycache/ - .pyc files for Python interpreter to compile the source to
     - init.py - import all files in pwd
     - l2norm.py - contains instances:
       - class L2Norm - calculate L2 norm and normalize
@@ -122,10 +117,8 @@ On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub
     - function decode - decode locations from priors and locations and return bbox predictions
     - function log_sum_exp - compute log of sum of exponent of difference between current tensor and maximum value of tensor, for unaveraged confidence loss
     - function nms - compute non-maximum suppression to avoid too many overlapping bboxes that highlight nearly the same area
-- out/ - output pickle files organized by the 20 VOC classes
-- train_eval_test_notebooks/ - training and evaluation notebooks for loss fn visualization
 - utils/ -
-  - pycache/ - .pyc files for Python interpreter to compile the source to
+
   - init.py - import all in pwd
   - augmentations.py - contains instances:
     - function intersect - return intersection of two given bounding boxes
@@ -157,16 +150,16 @@ On [UCSD Data Science and Machine Learning Cluster](https://datahub.ucsd.edu/hub
 - denNet.pt - Trained DUDnCNN net for image denoising.
 
 ### References 
+
 - [Project Statement for Object-Detection](https://www.charles-deledalle.fr/pages/files/ucsd_ece285_mlip/projectC_object_detection.pdf)
 - Inspired by https://github.com/amdegroot/ssd.pytorch for SSD Implementation.
 
 Regarding the Inception Implementation, we referred to:
 - [INCEPTION SINGLE SHOT MULTIBOX DETECTOR FOR OBJECT DETECTION ](https://sci-hub.tw/10.1109/icmew.2017.8026312)
 
-## A project by - 
+## Contributers - 
 
 - Vedavyas Poturu
 - Sanika Patange
 - Payam Khorramshahi
 - Shivani Athavale
-
