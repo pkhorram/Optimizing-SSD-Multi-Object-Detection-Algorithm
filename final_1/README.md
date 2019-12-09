@@ -39,7 +39,7 @@ In this project we are using the `2007 and 2012 VOC trainval` dataset in order t
 (((NEEDS CHANGES)))
 Run **SSD_Demo.ipynb** notebook to run Single-Shot Detection on a random image from the VOC2007 dataset. 
 
-Replace ` voc_root ` and ` dataset_root ` in config_vgg16_ssd.py with the location of your downloaded dataset.
+Update ` voc_root ` and ` dataset_root ` in config_vgg16_ssd.py with the location of your downloaded dataset.
 `voc_root` -> should contain VOC2007 and VOC2012 directories -> ` PATH_TO/ ` 
 and 
 `dataset_root ` -> `PATH_TO/VOC2007/` 
